@@ -13,8 +13,9 @@ const Game = ({ name, background_image, rating,released}) => {
                     <p><strong>Rating :</strong> {rating}/5</p>
                     <p><strong>Released :</strong> {released}</p>
                     <div>
+                        <button className="view-game">View Game</button>
                         <button className="favorite-btn" onClick={() => setFavorite(!favorite)}>
-                        {favorite ? "Remove from favorites" : "Add to favorites"}
+                        {favorite ? "Not Favorite" : "Favorite"}
                         </button>
                     </div>
                     <button className="delete-btn">Delete Game</button>
