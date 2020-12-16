@@ -46,7 +46,7 @@ const GameList = () => {
 
   return (
     <div>
-      <strong>Click here to see all the games or best games !</strong>
+      <strong>Click here !</strong>
       <button className="switch-btn" onClick={() => setBestGames(!bestGames)}>
         {bestGames ? "All Games" : "Best Games"}
       </button>
