@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
+import { Link } from "react-router-dom";
 
 import "./Game.css";
 
-const Game = ({ name, background_image, rating,released}) => {
+const Game = ({ name, background_image, rating,released, id}) => {
     const [favorite, setFavorite] = useState(false);
 
         return(
@@ -13,12 +14,14 @@ const Game = ({ name, background_image, rating,released}) => {
                     <p><strong>Rating :</strong> {rating}/5</p>
                     <p><strong>Released :</strong> {released}</p>
                     <div>
-                        <button className="view-game">View Game</button>
+                        <Link to={`games/${id}`}>
+                            <button className="view-game">View Game</button>
+                        </Link>
                         <button className="favorite-btn" onClick={() => setFavorite(!favorite)}>
                         {favorite ? "Not Favorite" : "Favorite"}
                         </button>
                     </div>
-                    <button className="delete-btn">Delete Game</button>
+                        <button className="delete-btn">Delete Game</button>
                 </div>
             </div>
         )
