@@ -7,6 +7,10 @@ import './GameList.css';
 
 const Gamelist = () => {
   const [gameList, setGameList] = useState([]);
+  const [bestGames, setBestGames] = useState (false);
+  const [filtered, setFiltered] = useState ([]);
+  const [games, setGames] = useState([]);
+
 
   useEffect(() => {
     const fetchGames = () => {
@@ -21,12 +25,32 @@ const Gamelist = () => {
       fetchGames();
   }, []);
 
+  useEffect(() => {
+    const filtered = () => {
+      setFiltered(gameList.filter(game => game.rating >= 4.5))
+    }
+    filtered()
+  }, [gameList]);
+
+  useEffect(() => {
+    if (bestGames) {
+      setGames ([...filtered])
+    } else {
+      setGames ([...gameList])
+    }
+  }, [filtered, gameList, bestGames]);
+
 
   return (
-    <div className="cards">
-      {gameList.map((game) => {
-        return <Game {...game} key={game.id} />;
-      })}
+    <div>
+      <button className="switch-btn" onClick={() => setBestGames(!bestGames)}>
+        {bestGames ? "Best Games" : "All Games"}
+      </button>
+      <div className="cards">
+        {games.map((game) => {
+          return <Game {...game} key={game.id} />;
+        })}
+      </div>
     </div>
   );
 };
