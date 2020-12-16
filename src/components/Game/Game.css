@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    width: 300px;
-    margin: 35px;
+    width: 320px;
+    margin: 25px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .card-body h2 {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .card-body p {
@@ -46,7 +46,7 @@
 
 .favorite {
     width: 15px;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .delete-btn {

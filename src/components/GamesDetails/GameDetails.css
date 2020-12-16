@@ -1,0 +1,33 @@
+.cardsbis {
+    display: flex;
+    justify-content: center;
+}
+
+.cardbis {
+    box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
+    border-radius: 10px;
+    margin: 35px;
+    width: 80%;
+}
+
+.cardbis-head img {
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+    background-position: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.screens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.screens > * {
+    padding: 5px;
+}
+
+.cardbis-body {
+    padding: 10px 20px;
+}

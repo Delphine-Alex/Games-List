@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Game.css";
 
-const Game = ({ name, background_image, rating,released, id}) => {
+const Game = ({ name, background_image, rating,released, id, removeGame}) => {
     const [favorite, setFavorite] = useState(false);
 
         return(
@@ -21,7 +21,7 @@ const Game = ({ name, background_image, rating,released, id}) => {
                         {favorite ? "Not Favorite" : "Favorite"}
                         </button>
                     </div>
-                        <button className="delete-btn">Delete Game</button>
+                        <button className="delete-btn" onClick={() => removeGame(id)}>Delete Game</button>
                 </div>
             </div>
         )

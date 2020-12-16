@@ -40,15 +40,19 @@ const GameList = () => {
     }
   }, [filtered, gameList, bestGames]);
 
+  const removeGame = (id) => {
+    setGameList(gameList.filter((game) => game.id !== id));
+  };
 
   return (
     <div>
+      <strong>Click here !</strong>
       <button className="switch-btn" onClick={() => setBestGames(!bestGames)}>
         {bestGames ? "Best Games" : "All Games"}
       </button>
       <div className="cards">
         {games.map((game) => {
-          return <Game {...game} key={game.id} />;
+          return <Game {...game} key={game.id} removeGame={removeGame} />;
         })}
       </div>
     </div>
