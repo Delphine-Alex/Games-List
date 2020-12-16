@@ -27,7 +27,7 @@ const GameList = () => {
 
   useEffect(() => {
     const filtered = () => {
-      setFiltered(gameList.filter(game => game.rating >= 4.5))
+      setFiltered(gameList.filter(game => game.rating >= 4.40))
     }
     filtered()
   }, [gameList]);
@@ -46,9 +46,9 @@ const GameList = () => {
 
   return (
     <div>
-      <strong>Click here !</strong>
+      <strong>Click here to see all the games or best games !</strong>
       <button className="switch-btn" onClick={() => setBestGames(!bestGames)}>
-        {bestGames ? "Best Games" : "All Games"}
+        {bestGames ? "All Games" : "Best Games"}
       </button>
       <div className="cards">
         {games.map((game) => {
