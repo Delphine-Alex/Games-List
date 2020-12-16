@@ -17,6 +17,7 @@ const Game = ({ name, background_image, rating,released}) => {
                         {favorite ? "Remove from favorites" : "Add to favorites"}
                         </button>
                     </div>
+                    <button className="delete-btn">Delete Game</button>
                 </div>
             </div>
         )

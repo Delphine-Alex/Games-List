@@ -40,3 +40,11 @@
     width: 15px;
     margin-left: 40px;
 }
+
+.delete-btn {
+    border: 2px solid var(--red-color);
+    color: var(--red-color);
+    border-radius: 30px;
+    padding: 5px 20px;
+    margin: 10px;
+}

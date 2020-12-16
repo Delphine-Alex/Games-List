@@ -5,7 +5,7 @@ import Game from '../Game/Game';
 
 import './GameList.css';
 
-const Gamelist = () => {
+const GameList = () => {
   const [gameList, setGameList] = useState([]);
   const [bestGames, setBestGames] = useState (false);
   const [filtered, setFiltered] = useState ([]);
@@ -55,4 +55,4 @@ const Gamelist = () => {
   );
 };
 
-export default Gamelist;
+export default GameList;
